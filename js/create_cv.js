@@ -127,6 +127,10 @@ function submitForm() {
             let errorKey = elemWithKey !== "" ? elemWithKey : elem;
             document.querySelector('[data-name="'+elem+'"]').innerHTML = errorMessages[errorKey];
         });
+
+        // go to the top of page
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     } else {
         cvPreview(formdata);
     }  
